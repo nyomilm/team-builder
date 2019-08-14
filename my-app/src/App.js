@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Form from './Components/Forms';
+import {MembersList} from './Components/MembersList';
+import {Members} from './Components/Members';
+
 
 function App() {
+  const [members, setMembers] = useState();
+
+  const addNewMember =members => {
+    setMembers([...members, member]);
+  };
   return (
     <div className="App">
       <header className="App-header">
