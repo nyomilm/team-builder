@@ -40,9 +40,7 @@ Follow these steps for completing your project.
 
 ### STEP 1 - Setup your state
 
-- Import the `useState` hook and set up a state property for your team members list
-
-- Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
+-X Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
 
 - Render your list of team members
 
@@ -97,3 +95,4 @@ After finishing your required elements, you can push your work further. These go
 - Look into the various strategies around form validation. What happens if you try to enter a number as a team-members name? Does your App allow for that? Should it? What happens if you try and enter a function as the value to one of your fields? How could this be dangerous? How might you prevent it?
 
 - Style the forms. There are some subtle browser defaults for input tags that might need to be overwritten based on their state (active, focus, hover, etc.); Keep those CSS skill sharp.
+NM
