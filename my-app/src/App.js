@@ -1,35 +1,28 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form from './Components/Forms';
+import Forms from './Components/Forms';
+import Members from './Components/Members';
 import {MembersList} from './Components/MembersList';
-import {Members} from './Components/Members';
 
 
 function App() {
-  const [members, setMembers] = useState();
+  const [members, setMembers] = useState(MembersList);
 
-  const addNewMember =members => {
+  const addNewMember =member => {
+    member.id = members.lenth + 1;
     setMembers([...members, member]);
   };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+      {
+        members.map((person, id) =>(
+          <Member name={person.name} email={person.email} role={person.role} key={id} /> 
+        ))
+  
+      }
+      <Form addToMember={addToMember}/>
+      </div>
+      );
+      }
 export default App;
